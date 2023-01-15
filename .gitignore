@@ -1,0 +1,9 @@
+.DS_Store
+.idea
+/app/vendor/
+/app/node_modules/
+/app/tests/
+/app/package-lock.json
+/app/composer.lock
+/app/.env.example
+/app/.env
