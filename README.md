@@ -1,8 +1,8 @@
 ## Disclaimer
 Hi there!\
-I am relatively new to Docker. I was searching for a Docker/Composer project template with PHP 8, Laravel 8, Nginx, Redis, Postgres and PgAdmin but couldn't find the exact setup I needed. So I tried and built one by myself. After a lot of tweaking, I finally got it working. So I am making it public just in case anyone else need this exact setup.
+I am relatively new to Docker. I was searching for a Docker/Composer project template with PHP 8, Laravel 9, Nginx, Redis, Postgres and PgAdmin but couldn't find the exact setup I needed. So I tried and built one by myself. After a lot of tweaking, I finally got it working. So I am making it public in case anyone else needs this exact setup.
 
-As I said, I am new to this and I am sure you can find some redundant/unnecessary parts in it. Or it might not work at all in your particular environment. Use at your own risk.
+As I said, I am new to this and am sure you can find some redundant/unnecessary parts. Or it might not work at all in your particular environment. You can use it at your own risk.
 
 ## What is included
 - PHP 8.2
@@ -11,7 +11,7 @@ As I said, I am new to this and I am sure you can find some redundant/unnecessar
 - MailHog
 - Postgres
 - PgAdmin
-- Laravel 8
+- Laravel 9
 
 ## PHP extensions
 - gd 
@@ -29,14 +29,13 @@ docker-compose up -d
 </pre>
 
 ## Creating Laravel project
-Inside the **app** folder, run
+Inside the project folder, run the below command. It will create your laravel project in the src folder.
 <pre>
-docker-compose exec php sh
-composer create-project laravel/laravel=8 ./ --prefer-dist --ignore-platform-reqs
+docker-compose exec php composer create-project laravel/laravel=9 ./ --prefer-dist
 </pre>
 
 ## Updating Composer and installing Node modules
-While inside the project folder, run
+Inside the project folder, run
 <pre>
 docker-compose exec php composer update
 docker-compose exec php npm install
